@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Shape with Numbers</title>
+</head>
+<body>
+    <script> 
+        do{
+            var numb=prompt("Please input a number: ");
+        }while(isNaN(numb));
+        document.write("Number inputted: " + numb + "<br>");
+
+        var num=numb;
+
+        function shape(){
+            if (num%2==0){
+                var n=num;
+                    while(n>0){
+                        var row=1;
+                        while(row<=n){
+                            document.write(n + " ");
+                            row++;
+                        }
+                        document.write("<br>");
+                        n--;
+                    }
+                }else{
+                    var n=num; 
+                while (n>0){
+                    var row=1;
+                    while (row<=num){
+                        document.write(n + " ");
+                        row++;
+                    }
+                    document.write("<br>");
+                    n--;
+                    }
+                }
+            }
+        shape();
+    </script>
+</body>
+</html>

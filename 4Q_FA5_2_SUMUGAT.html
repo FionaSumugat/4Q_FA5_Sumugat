@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays: 7-Person Contact List</title>
+</head>
+<body>
+    <input type="text" id="name">
+    <button onclick="add()">Add</button>
+    <button onclick="remove()">Remove</button>
+    <p id="cntctslist"></p>
+
+    <script>
+        var contacts = [];
+        function add(){
+            var c = document.getElementById("name").value;
+            
+            if (contacts.length >= 7){
+                contacts.shift();
+            }
+            contacts.push(c)
+            document.getElementById("cntctslist").innerHTML = contacts;
+        }
+
+        function remove(){
+            contacts.pop()
+            if (contacts.length >= 7){
+                contacts.shift;
+            }
+
+            document.getElementById("cntctslist").innerHTML = contacts;
+        }
+    </script>
+</body>
+</html>
